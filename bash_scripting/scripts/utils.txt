@@ -1,0 +1,11 @@
+basename - Give the filename
+dirname - Give the directory
+realpath - Give the full path of the file
+$? - Give you exit status of the last command.
+exit 0/1 - End the script
+sleep ks/km - sleep your shell for k seconds/minutes
+[[ -d folder_name ]] - if folder exists
+[[ ! -d folder_name ]] - if folder not exists
+> - To redirect the input to the file
+>> - To append the input to the file
+/var/logs/messages - logger logs resides here
