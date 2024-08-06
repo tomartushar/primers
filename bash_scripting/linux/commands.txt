@@ -1,0 +1,202 @@
+pwd : Return the current directory path
+
+whoami : Display name of the current user
+
+date : To check the system date
+	date +%D
+	date +%T
+	date +%H:%M
+
+ls : To list all the files and directory inside folder
+	ls -ltr
+	ls -lh
+
+clear : To clear the terminal
+
+cat file : Display content of the file on terminal
+
+less file : To read a file and search for a word
+
+more file : To view content of a file page by page
+
+touch newFile : To create a new file
+
+rm file : To remove the file
+
+vi file : To create or edit the file
+
+nano file : To create or edit the file 
+
+mkdir dir_name : To create a directory
+
+rmdir dir_name : To remove the directory
+
+rm -rf dir_name : To remove the directory
+
+cd /path/folder : To change the path
+
+cd .. : To move to parent folder
+
+cp src_file dest_file : To create a copy of src_file as dest_file
+
+mv src_file dest_file : To cut-paster a src_file to the dest_file
+
+head -n file_name : To display top n lines of a file
+
+tail -n file_name : To disaply last n lines of a file
+
+sort file : To sort the content of the file
+		* sort -r file
+		
+uniq : To display unique line of the file
+
+split -l n file_name : To split file_name into n files
+
+grep content file : To search `content` in the file
+			* egrep "word1|word2" file
+
+*, [], {} : wildcards in linux
+
+shuf file_name : To shuffle the lines of file
+
+wc -l file : To count the number fo lines a file
+
+cmp fileA fileB : To check if two files are identical or not
+
+diff -u fileA fileB : To check the difference b/w two files
+
+find /path/ -name file : To find the location of file inside `/path/`
+
+history : Display previously used commands in past
+
+help : To check syntax and options available for a command e.g. ls --help
+
+man : To read the manual or more info about a command.e.g. man ls
+
+which : To check which executable is using for a command. e.g which ls
+
+bc : TO use calculator in linux
+
+cal : To check the calendar
+	* cal 2024
+	* cal JAN 2024
+	
+uptime : To check from how long server is running
+
+script : To record your activity on terminal in a file
+
+alias new_name="<command>" : To create an alias for command.
+
+gzip -k file : To zip/compress a file
+
+gzip -d file : To unzip/decompress a file
+
+gunzip file : To unzip/decompress a file
+
+tar -czf <new_name>.tar.gz dir_name : To compress a folder/directory
+
+tar -xzf file_name.tar.gz : To decompress a zipped folder
+
+zip myfiles.zip fileA fileB : To zip multiple files into a sinle file
+
+unzip -l myfiles.zip : To list files in zipped file
+
+wget URL_of_file : To download a file from internet
+			* wget -O file_name URL_of_file
+			
+curl link : To call an API on linux
+
+sudo apt install package-name : To install package
+
+dpkg -l | grep pakage-name : To check application installed or not on linux
+
+apt list --installed | grep package-name : To check appliation installed or not on linux
+
+apt search package-name : To list available packages to install on linux
+
+
+systemctl list-units --type=service --all : To check all services
+
+
+systemctl status service : To check the status of service
+
+systemctl start service : To start the service
+
+systemctl stop service : To stop the service
+
+printenv : To list all existing environment variables
+
+export NAME="<value>" : To add a new temporary environment vairable
+
+source ~./bashrc : To add permanent environment variable. Run this command after adding variable in .bashrc
+
+
+awk -F , '{print $2}' file.csv : print 2nd column from a csv file using deliminter `,`
+
+cut -cm-n file : To display starting m to n characters of all lines of file
+
+sed -n 'Kp' file : To display a specific line K from a file
+
+sed -n 's/from/to/g' file : Replace a word `from` by `to` in file
+
+tr [:lower:] [:upper:] < file : to convert case of file
+				* tr [:punct:] Z < file
+				* tr [:digit:] Z < file
+				
+echo "ABCDE" | fold -wn : To display following line in vertical with width n
+
+
+ssh user@hostname : To access remote server
+
+scp file user@hostname:location : To copy a file to a remote server
+
+chmod a+rwx file : To modify the permission of a file
+			* a = all, u = user, g = group, o = other
+			
+
+chown new_user file : To change ownership of a file
+
+free : Tell you about memory space
+	* free -ht
+
+top : To check % memory and CPU utilization
+
+du : to check disk utilization
+
+df : To check file system available
+
+lscpu : To check CPU/core/thread info of linux server
+
+lsblk : To see list of storage devices disk partition
+
+ps -ef : To check process is running or not
+
+pgrep process : To get PID of a process
+
+kill -9 PID : To stop a process PID forcefully
+
+ifconfig : To check IP of your machine
+
+ping URL : To check if server/website is accessible or not
+
+telnet IP Port : To check if a IP:PORT is accessible and open or not
+
+netstat -putan | grep PORT(80) : To check if port is open or not
+
+reboot : To restart our linux server
+
+shutdown : To shutdown our linux server
+
+useradd user_name : To create a new user on linux server
+
+passwd user_name : To change password for the user
+
+groupadd group_name : To add a new group
+
+userdel user_name : To delete a user
+
+groupdel group_name : To delete a group
+
+
+
+
