@@ -1,0 +1,94 @@
+SETUP AND INIT
+* git init
+	* Initialize a new Git repo
+
+* git clone
+	* Clone an existing repo from Github to local machine
+	
+STAGE AND SNAPSHOT
+* git status
+	* Check the status of files in working directory and staging area
+
+* git add
+	* add files to the staging area before commiting
+
+* git reset
+	* unstage file
+
+* git commit
+	* commit changes in the staging area to the repo with a msg
+	* git commit -am 'commit message' : commit all tracked changes
+	* git commit --amend : modify the last commit
+
+BRANCHES
+* git branch
+	* list, create, or delete branch
+	* git branch -D branch_name : delete a branch forcefully
+	* git branch --set-upstream-to remote_branch : sets the upstream branch to the specified remote branch
+
+* git checkout
+	* create branch, switch b/w branches or restore working directory files
+	* git checkout -b branch_name : create and switch to new branch
+	* git checkout branch_name : switch to an existing branch
+	* git checkout <commit> : switches working directory to specific commit
+
+* git log
+	* view the commit history
+	* git log --stat : show commit logs with stats
+
+SHARE AND UPDATE
+* git remote add [ref] [url]
+	* add remote repo
+	
+* git push
+	* push commits from local repo to a remote repo
+
+* git pull
+	* Fetch and merge changes from a remote repo into local branch
+
+* git fetch
+	* Fetch the remotes changes but not merge	
+	
+* git merge
+	* Merge changes from one branch into another
+
+
+TEMPORARY COMMITS
+* git stash
+	* stash changes
+
+* git stash pop
+	* apply stash
+
+* git stash drop
+	* discard stash
+	
+REWRITE HISTORY
+* git rebase
+	* rebase current branch
+	* git rebase -i : rebase interactively, rewrite commit history
+	* git rebase branch_name : rebase the current branch onto another branch
+
+* git reset
+	* reset to commit
+	* git reset HEAD~1 : Undo the last commit, preserving changes locally
+	* git reset --soft HEAD^ : undo the last commit, but keep the changes
+	* git reset --hard : reset everything to previous commit
+	
+* git revert
+	* git revert commit_id : create a new commit that undoes the changes of a specific commit
+
+* git cherry-pick
+	* Apply changes from a specific commit
+
+INSPECT AND COMPARE
+* git log branchB branchA
+	* show unique commits in branchA
+
+* git diff
+	* Show changes b/w commits, commit and working tree, etc.
+
+* git show [SHA]
+	* show commit
+	
+ 
