@@ -74,34 +74,45 @@ TEMPORARY COMMITS
 
 REWRITE HISTORY
 * git rebase
-	* rebase current branch
+	* rebase the current branch
 	* git rebase -i: rebase interactively, rewrite commit history
-	* git rebase branch_name: rebase the current branch onto another branch
+	* git rebase branch_name: rebase the current branch onto given branch
 
 * git reset
-	* unstage file, reset to commit
+	* unstage the changes
 	* git reset HEAD~1: Undo the last commit, preserving changes locally
-	* git reset --soft HEAD^: undo the last commit, but keep the changes
-	* git reset --hard: reset everything to previous commit
+	* git reset --soft HEAD~1: undo the last commit, but keep the changes staged
+	* git reset --mixed HEAD~1: undo the last commit, but unstage the changes
+	* git reset --hard: Completely remove the last commit and changes
 	
 * git revert
 	* git revert commit_id: create a new commit that undoes the changes of a specific commit
 
 * git cherry-pick
-	* Apply changes from a specific commit
+	* Apply changes from a specific commit (from another branch) to the current branch, depending on the similarity b/w the branches, if significant differences exist conflict will come.
 
 
 INSPECT AND COMPARE
 * git log
 	* view the commit history
-	* git log --stat: show commit logs with stats
-* git log branchB branchA
-	* show unique commits in branchA
+	* git log -n <number>
+	* git log --author=<name>
+	* git log --since=<data> and --until=<date>
+	* git log --grep=<pattern>
+	* git log --stat
+	* git log --graph
 
 * git diff
-	* Show changes b/w commits, commit and working tree, etc.
+	* show changes b/w working directory and staged area
+	* git diff --stat: show the summary of the changes
+	* git diff --name-only: shown only the names of changed file
+	* git diff <branch_name>/<file_name>
+	* git diff --staged/--cached: compare the staging area with the last commit
+	* git diff <commit>: compare the working directory with a specific commit
+	* git diff <commit1> <commit2>: compare the difference b/w two commits
+	* 
 
-* git show [SHA]
-	* show commit
+* git show <commit>
+	* show commit details
 	
  
